@@ -1,0 +1,82 @@
+:root{
+  --saffron:#e8741a;
+  --green:#14683a;
+  --navy:#0f2a43;
+  --ink:#1d2733;
+  --paper:#fbf9f4;
+  --line:#e3ddd0;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,"Times New Roman",serif;color:var(--ink);background-color:#fff4e0;background-image:radial-gradient(circle at 6% 8%,rgba(255,140,30,.45),transparent 34%),radial-gradient(circle at 95% 22%,rgba(20,160,80,.35),transparent 36%),radial-gradient(circle at 10% 52%,rgba(30,110,220,.25),transparent 34%),radial-gradient(circle at 92% 66%,rgba(255,140,30,.35),transparent 36%),radial-gradient(circle at 8% 92%,rgba(20,160,80,.35),transparent 36%),linear-gradient(180deg,#ffe9c7 0%,#fffdf8 30%,#e3f6ea 62%,#fff0d6 100%);line-height:1.7;font-size:18px}
+img{max-width:100%;display:block}
+h1,h2,h3,nav,.btn{font-family:"Trebuchet MS","Segoe UI",Arial,sans-serif}
+a{color:inherit}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--saffron);outline-offset:3px}
+
+/* top bar */
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:10px 5vw;background:#fff;border-bottom:4px solid;border-image:linear-gradient(90deg,var(--saffron) 33%,#fff 33% 66%,var(--green) 66%) 1}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-family:"Trebuchet MS",Arial,sans-serif;font-size:1.15rem;color:var(--navy)}
+.brand img{height:42px;width:56px;object-fit:cover;object-position:left center;border-radius:4px}
+nav{display:flex;gap:22px;flex-wrap:wrap}
+nav a{text-decoration:none;font-size:.95rem;font-weight:600;color:var(--navy)}
+nav a:hover{color:var(--saffron)}
+
+/* hero */
+.hero{min-height:78vh;display:flex;align-items:center;padding:0 5vw;color:#fff;
+  background:linear-gradient(90deg,rgba(8,20,34,.92) 0%,rgba(8,20,34,.7) 45%,rgba(8,20,34,.15) 100%),url("images/india-map.jpg") center/cover no-repeat}
+.hero-text{max-width:560px}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.05;margin-bottom:18px}
+.hero p{font-size:1.15rem;margin-bottom:28px;color:#e9eef3}
+.btn{display:inline-block;padding:13px 26px;background:var(--saffron);color:#fff;text-decoration:none;font-weight:700;border-radius:4px;transition:background .2s}
+.btn:hover{background:#c85f0e}
+.btn-light{background:#fff;color:var(--green)}
+.btn-light:hover{background:#eef6f0}
+
+/* sections */
+section{padding:72px 5vw}
+h2{font-size:clamp(1.7rem,3.5vw,2.3rem);color:var(--navy);line-height:1.2;margin-bottom:16px}
+p+p{margin-top:14px}
+.about,.services,.city,.citizens{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;max-width:1100px;margin:0 auto}
+.about img,.city img{border-radius:6px;width:100%}
+.services figure{background:#fff;border:1px solid var(--line);border-radius:6px;padding:20px}
+.services img{margin:0 auto;max-height:520px;width:auto}
+
+.citizens img{border-radius:6px;width:100%}
+
+/* moments */
+.moments{max-width:1100px;margin:0 auto}
+.moments h2{text-align:center;margin-bottom:32px}
+.moments figure{margin:0}
+.moments img{width:100%;border-radius:6px;border:1px solid var(--line)}
+.moments figcaption{font-size:.95rem;color:#51606f;margin-top:10px;line-height:1.5}
+.moments .wide{margin-bottom:36px}
+.moments .wide img{aspect-ratio:2/1;object-fit:cover;object-position:center top}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.pair img{aspect-ratio:4/3;object-fit:cover;object-position:left center}
+
+/* pillars */
+.pillars{background:rgba(255,255,255,.72);border-block:1px solid var(--line)}
+.pillars h2{text-align:center;margin-bottom:36px}
+.pillar-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;max-width:1100px;margin:0 auto}
+.pillar-grid article{padding:22px 0 0;border-top:5px solid var(--saffron)}
+.pillar-grid article:nth-child(even){border-top-color:var(--green)}
+.pillar-grid h3{font-size:1.15rem;color:var(--navy);margin-bottom:8px}
+.pillar-grid p{font-size:1rem}
+
+/* call to action */
+.cta{background:var(--green);color:#fff;text-align:center}
+.cta h2{color:#fff}
+.cta p{margin-bottom:26px}
+
+.footer-logo{width:min(260px,70%);margin:0 auto 12px;border-radius:6px}
+footer{padding:32px 5vw 24px;text-align:center;font-size:.9rem;background:var(--navy);color:#c5d1dc}
+
+@media (max-width:800px){
+  body{font-size:17px}
+  .about,.services,.city,.citizens{grid-template-columns:1fr;gap:28px}
+  .hero{min-height:70vh;background:linear-gradient(rgba(8,20,34,.8),rgba(8,20,34,.7)),url("images/india-map.jpg") center/cover no-repeat}
+  .topbar{flex-direction:column;align-items:flex-start}
+  section{padding:52px 6vw}
+}
